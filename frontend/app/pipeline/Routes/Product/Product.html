@@ -1,0 +1,17 @@
+
+<div ng-controller="Routes.ProductController">
+
+    <div class="btn btn-default" ng-click="controller.goBack()">
+        <i class="glyphicon glyphicon-chevron-left"></i>&nbsp;Back
+    </div>
+
+    <a class="btn btn-success pull-right" href="{{ product.productURL }}"><i class="glyphicon glyphicon-ok"></i>&nbsp;Visit Website</a>
+
+    <hr>
+
+    <div class="product-list row">
+        <div product product-data="product" view="single"></div>
+        <div loader ng-show="loading"></div>
+    </div>
+
+</div>

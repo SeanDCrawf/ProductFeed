@@ -1,0 +1,19 @@
+.product-list { display: flex; flex-wrap: wrap;
+    .product { display: flex;
+        .panel { position: relative; width: 100%;
+            .panel-image { position: absolute; width: 80px; top: 10px; left: 10px; }
+            .panel-body { margin-left: 100px; min-height: 100px;
+                a { color: #000;
+                    &:hover { text-decoration: none; }
+                }
+            }
+
+            @media only screen and (min-width: 768px){
+                .panel-image { width: auto; position: relative; top: auto; left: auto; }
+                .panel-body { margin-left: 0; }
+            }
+
+            &.panel-rollver { transition: background 0.4s ease; background: #EEE; cursor: pointer; }
+        }
+    }
+}

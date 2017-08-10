@@ -1,0 +1,25 @@
+
+<div ng-controller="Routes.HomeController">
+
+    <div ng-form name="product_search">
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon" ng-click="controller.submit()"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" ng-keypress="controller.keypress($event)" class="form-control input-lg" id="product_url" ng-model="model.product_url" name="product_url" placeholder="http://pf.tradetracker.net/...">
+                <div class="input-group-addon hidden-xs" ng-if="products.length > 0">{{ products.length }} results</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-list row">
+        <div product ng-repeat="product in products" product-data="product" view="list"></div>
+        <div loader ng-show="loading"></div>
+    </div>
+
+    <div class="text-center">
+        <hr ng-if="products.length > 0">
+        <div class="btn btn-primary" ng-style="{ 'opacity': (scrollY > 0)?1:0 }" ng-click="controller.toTop();"><i class="glyphicon glyphicon-chevron-up"></i>&nbsp;Back to top</div>
+    </div>
+    <br>
+
+</div>

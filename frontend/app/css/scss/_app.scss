@@ -1,0 +1,14 @@
+@import '../../pipeline/Components/UIMessage/UIMessage';
+@import '../../pipeline/Components/Product/Product';
+@import '../../pipeline/Components/Loader/Loader';
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img.full-width {
+    display: block;
+    width: 100%;
+}
+
